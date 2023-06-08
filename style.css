@@ -1,0 +1,63 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background: linear-gradient(#fca6f5, #b1dcff, #8de4fa, #81f5d8);
+}
+
+/* Define styles for the header */
+header {
+  display: flex;
+  height: 10vh; /* 10% of the viewport height */
+  width: 100vw; /* 100% of the viewport width */
+  color: black; /* text color */
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Define styles for the main content */
+main {
+  height: 80vh; /* 80% of the viewport height */
+  width: 100vw; /* 100% of the viewport width */
+  color: black; /* text color */
+  font-size: 20px;
+  margin: 5% 0px 10% 0px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+p, li {
+  margin: 0% 60% 0% 5%;
+  text-align: start;
+}
+
+#second, #fourth, #sixth {
+  justify-content: flex-start;
+}
+#second p, #second li, #fourth p, #fourth li, #sixth p, #sixth li {
+  margin: 0% 5% 0% 60%;
+}
+
+/* Define styles for the footer */
+footer {
+  height: 10vh; /* 10% of the viewport height */
+  width: 100vw; /* 100% of the viewport width */
+  background-color: transparent;
+  color: black; /* text color */
+  text-align: center;
+}
+
+img {
+  width: 50%;
+  border-radius: 25px;
+  border-style: outset;
+  border-color: #fae7f8;
+  border-width: 10px;
+  box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.75);
+  margin: 0% 5% 0% 5%;
+}/*# sourceMappingURL=style.css.map */

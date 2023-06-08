@@ -1,0 +1,85 @@
+
+$primaryColor: #fca6f5;
+$secondaryColor: #b1dcff;
+$thirdColor: #8de4fa;
+$fourthColor:  #81f5d8;
+$borderColor: #fae7f8;
+$list: $primaryColor, $secondaryColor, $thirdColor, $fourthColor;
+$imageRadius: 25px;
+@mixin backgroundColor($direction, $list){
+    background: linear-gradient($primaryColor,$secondaryColor, $thirdColor, $fourthColor);
+}
+@mixin imageBorder{
+  border-radius: $imageRadius;
+  border-style: outset;
+  border-color: $borderColor;
+  border-width: 10px;
+}
+@mixin backgroundShadow{
+  box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.75);
+}
+@mixin flexBox($position){
+  justify-content: $position;
+}
+
+
+body{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    @include backgroundColor(top,$list);
+}
+
+
+  /* Define styles for the header */
+  header {
+    display: flex;
+    height: 10vh; /* 10% of the viewport height */
+    width: 100vw; /* 100% of the viewport width */
+    color: black; /* text color */
+    align-items: center;
+    @include flexBox(center);
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  /* Define styles for the main content */
+  main {
+    height: 80vh; /* 80% of the viewport height */
+    width: 100vw; /* 100% of the viewport width */
+
+    color: black; /* text color */
+    font-size: 20px;
+    margin: 5% 0px 10% 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @include flexBox(flex-end);
+  }
+  p, li{
+    margin: 0% 60% 0% 5%;
+    text-align: start;
+ }
+
+  #second, #fourth, #sixth{
+    @include flexBox(flex-start);
+    p, li{
+      margin: 0% 5% 0% 60%;
+   }
+  }
+
+  /* Define styles for the footer */
+  footer {
+    height: 10vh; /* 10% of the viewport height */
+    width: 100vw; /* 100% of the viewport width */
+    background-color: transparent;
+    color: black; /* text color */
+    text-align: center;
+  }
+
+  img {
+      width: 50%;
+      @include imageBorder();
+      @include backgroundShadow();
+      margin: 0% 5% 0% 5%;
+  }
